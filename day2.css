@@ -1,0 +1,81 @@
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  display: flex;
+  max-width: 900px;
+  margin: 100px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px rgba(41, 198, 195, 0.1);
+}
+
+/* Left side text */
+.content1 {
+  flex: 1;
+  background: teal;
+  color: white;
+  padding: 30px;
+}
+
+.content1 h1 {
+  margin-bottom: 40px;
+
+}
+
+.content1 p {
+  line-height: 1.5;
+}
+
+/* Right side form */
+.content2 {
+  flex: 1;
+  padding: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background: teal;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #006666;
+}
+
+/* Responsive for small screens */
+@media (max-width: 700px) {
+  .box {
+    flex-direction: column;
+  }
+}
