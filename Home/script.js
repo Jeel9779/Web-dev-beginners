@@ -1,5 +1,6 @@
 const inputBox = document.getElementById("input-box");
 // add pro
+const filterBox = document.getElementById("filter-box");
 const priorityBox = document.getElementById("priority-box");
 const listContainer = document.getElementById("list-container");
 
@@ -50,3 +51,19 @@ function showTask(){
 }
 showTask();
 
+function filterTasks() {
+    let filter = filterBox.value;
+    let tasks = listContainer.getElementsByTagName("li");
+
+    for (let i = 0; i < tasks.length; i++) {
+        if (filter === "all") {
+            tasks[i].style.display = "block";
+        } 
+        else if (tasks[i].classList.contains(filter)) {
+            tasks[i].style.display = "block";
+        } 
+        else {
+            tasks[i].style.display = "none";
+        }
+    }
+}
